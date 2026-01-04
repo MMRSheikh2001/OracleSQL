@@ -1,3 +1,25 @@
+SELECT * 
+    FROM  hr.EMPLOYEES;
+
+SELECT first_name , last_name , email
+    FROM hr.EMPLOYEES;
+
+SELECT last_name , salary , salary * 12
+    FROM hr.employees;    
+
+select HIRE_DATE , HIRE_DATE + 90
+    from hr.EMPLOYEES;
+
+
+select first_name , commission_pct 
+    FROM hr.EMPLOYEES;
+
+select last_name as "Given ancestor Name" , salary*12  as "Yearly Salary"
+    from hr.employees;  
+
+
+
+
 SELECT last_name,email,hire_date , first_name, salary, commission_pct ,
 salary + commission_pct as "Salary With Commission", first_name || ' ' || last_name
     FROM employees;
@@ -47,3 +69,4 @@ SELECT *
 SELECT * 
     FROM employees
         WHERE  commission_pct is not null;
+
