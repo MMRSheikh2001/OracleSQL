@@ -41,6 +41,22 @@ select &1 , &2 , hire_date , salary
         
 select last_name , first_name , hire_date , salary
     from employees  
-        WHERE salary BETWEEN &FROM_salary and &To_salary;        
+        WHERE salary BETWEEN &FROM_salary and &To_salary;
+
+select employee_id , first_name , salary
+from hr.EMPLOYEES
+order by employee_id
+offset 5 rows fetch next 10 rows only;
+
+define salary = 2000
+select employee_id, last_name , salary
+from hr.EMPLOYEES
+where salary = &salary;
+
+SELECT concat(FIRST_NAME,LAST_NAME) as name, upper(FIRST_NAME), lower(last_name), initcap(email) as email
+from hr.EMPLOYEES;
+
+select length(Job_id) ,job_id , last_name, substr(last_name, -1, 3), first_name , instr(first_name,n)
+from hr.employees;        
             
             
