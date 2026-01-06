@@ -40,6 +40,17 @@ from dual;
 select sysdate, current_timestamp
 from dual;
 
+select last_name , MONTHS_BETWEEN
+       (current_timestamp , hire_date)
+from employees;
 
+select next_day('06-Feb-25' , 'friday')
+from dual;
+
+select last_day('4-feb-2028')
+from dual;
+
+select 
+from dual;
         
                                     
