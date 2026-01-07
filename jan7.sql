@@ -39,3 +39,10 @@ select max(salary),department_id, COUNT(department_id), job_id
 from employees
 group by department_id , job_id
 order by 4;
+
+select job_id , sum(salary) payroll 
+from employees
+where job_id not like '%REP%'
+GROUP by job_id 
+having sum(salary) > 13000
+order by sum(salary);
