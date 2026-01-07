@@ -41,8 +41,16 @@ group by department_id , job_id
 order by 4;
 
 select job_id , sum(salary) payroll 
-from employees
-where job_id not like '%REP%'
+from employees 
+where job_id not like '%REP%' 
 GROUP by job_id 
 having sum(salary) > 13000
 order by sum(salary);
+
+select avg(salary), department_id
+from employees
+group by department_id;
+
+select max(avg(salary))
+from employees
+group by department_id;
