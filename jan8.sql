@@ -19,4 +19,10 @@ select employee_id , last_name ,
     from employees join departments
     using (department_id);
     
-    
+select e.first_name,e.last_name , e.salary , d.department_name
+,l.street_address, l.city
+from employees e
+join departments  d
+on d.department_id = e.department_id
+join locations l
+on l.location_id = d.location_id;
