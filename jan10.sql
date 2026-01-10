@@ -53,7 +53,38 @@ where salary = (
         from employees 
         )
     );
-select last_name, first_name, employee_id
-from employees
-where manager_id = 120;
     
+    
+select last_name, first_name, job_id
+from employees
+where job_id in (
+    select  job_id
+    from employees
+    where manager_id = 120
+ ); 
+ 
+ select DISTINCT job_id
+ from employees
+where manager_id = 120;
+ 
+
+
+select last_name, job_id, salary
+from employees
+where job_id in (
+    select job_id
+    from employees
+    where last_name = 'Taylor')
+    
+and salary > (  
+    select max(salary)
+    from employees
+    where last_name = 'Taylor' );
+    
+select department_id , min(salary)
+from employees
+group by department_id 
+having min(salary) > (
+    select min(salary)
+    from employees
+    where department_id = 30);
