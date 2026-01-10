@@ -53,3 +53,7 @@ where salary = (
         from employees 
         )
     );
+select last_name, first_name, employee_id
+from employees
+where manager_id = 120;
+    
