@@ -88,3 +88,5 @@ having min(salary) > (
     select min(salary)
     from employees
     where department_id = 30);
+    
+    
