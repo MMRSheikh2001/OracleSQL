@@ -8,3 +8,7 @@ from employees
 UNION
 select job_id
 from retired_employees;
+
+CREATE table students(
+    
+);
