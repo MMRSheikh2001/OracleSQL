@@ -81,7 +81,7 @@ where First_name like 'S%';
 select avg(salary)
 from employees
 where commission_pct is not null;
-
+commit;
 
 select * from employees;
 select * from job_grades;
