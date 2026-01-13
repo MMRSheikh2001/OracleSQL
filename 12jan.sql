@@ -71,6 +71,11 @@ where department_id in(
         from emplyees
         GROUP by department_id));
 
+--1
+select department_id, avg(salary)
+from employees
+group by department_id
+having max(salary)> 12000;
 
 --2
 select First_name
