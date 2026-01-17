@@ -47,9 +47,8 @@ on  d.department_id =e.department_id
 select * from job_grades;
 
 select  e.FIRST_NAME, e.LAST_NAME,e.salary,g.grade
-from jobs j join employees e
-on j.job_id = e.job_id
-join job_grades g on j.min_salary = g.lowest_sal;
+from  employees e join job_grades g
+on e.salary between g.lowest_sal and g.highest_sal;
 --3
 select e.FIRST_NAME, e.LAST_NAME,d.department_name,l.city, l.state_province
 from departments d join employees e

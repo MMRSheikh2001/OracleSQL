@@ -27,4 +27,4 @@ create table emp1122(
 select * from emp1122;
 
 insert into emp1122 (emp_id,emp_name,emp_email,emp_salary,emp_cell)
-values (6,'Abul','abul@gmail.com',3000.00,'0165887854');
+values (7,'Masud','masud@gmail.com',3000.00,'0145887854');
