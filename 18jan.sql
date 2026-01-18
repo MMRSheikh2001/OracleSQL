@@ -6,3 +6,5 @@ rollback;
 
 desc employees;
 
+--alter learn
+
