@@ -34,3 +34,8 @@ set blood_grp ='B+'
 where emp_id = 5;
 
 drop table emp1122;
+
+--sequence
+
+
+
