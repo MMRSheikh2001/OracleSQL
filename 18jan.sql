@@ -38,4 +38,21 @@ drop table emp1122;
 --sequence
 
 
+create sequence stu_sq_stu_id
+    start with 100
+    increment by 1
+    maxvalue 9999999;
+    
+select stu_sq_stu_id.nextval
+from dual;
 
+select stu_sq_stu_id.currval
+from dual;
+
+insert into emp1294343(eid,ename,salary,hire_date,address)
+values(stu_sq_stu_id.currval,'sg',45566,sysdate-1400,'Feni');
+
+select * from emp1294343;
+
+insert into emp1294343(eid,ename,salary,hire_date,address)
+values(stu_sq_stu_id.nextval,'Rehana',45566,sysdate-1400,'Barisal');
