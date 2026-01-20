@@ -11,3 +11,4 @@ alter table emp1122 rename column emp_salary to salary;
 
 alter table emp1122 rename constraint hr_emp1122_emp_cell_uk
 to hr_emp1122_emp_cell_uq;
+
