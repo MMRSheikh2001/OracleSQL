@@ -9,6 +9,8 @@ address varchar2(300) default 'Dhaka,Bangladesh',
 constraint hr_emp01294343_eid_pk primary key(eid)
 );
 
+insert into emp01294343(eid,ename)
+values(1,'Emon');
 select * from employees;
 
 --2
