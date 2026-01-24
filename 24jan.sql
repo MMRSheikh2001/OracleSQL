@@ -41,3 +41,5 @@ insert into emp001294343(eid,ename)
 select employee_id, first_name
 from employees where salary =(select max(salary)
 from employees where job_id like 'SA%');
+
+commit;
