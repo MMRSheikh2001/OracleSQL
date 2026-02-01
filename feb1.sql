@@ -39,4 +39,5 @@ from employees
 where job_id like 'SA%';
 
 select * from emp187;
+drop table emp001294343;
 
