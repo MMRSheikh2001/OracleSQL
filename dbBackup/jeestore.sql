@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: jeestore
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,58 +16,56 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `employee`
+-- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `employee`;
+DROP TABLE IF EXISTS `category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `employee` (
+CREATE TABLE `category` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `salary` double NOT NULL,
-  `email` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name_UNIQUE` (`name`),
-  UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `name_UNIQUE` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `employee`
+-- Dumping data for table `category`
 --
 
-LOCK TABLES `employee` WRITE;
-/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (1,'Mahbub',12000,'mahbub@gmail.com'),(2,'Sabbir',12000,'sabbir@gmail.com'),(3,'Tanvir',1400,'tanvir@gmail.com'),(4,'Badrul',3455,'badrul@gmail.com');
-/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+LOCK TABLES `category` WRITE;
+/*!40000 ALTER TABLE `category` DISABLE KEYS */;
+INSERT INTO `category` VALUES (4,'Banana'),(9,'Fruits'),(5,'Keyboard'),(3,'Mobile'),(7,'Monitor'),(8,'Mouse'),(6,'WiFi Router');
+/*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `student`
+-- Table structure for table `supplier`
 --
 
-DROP TABLE IF EXISTS `student`;
+DROP TABLE IF EXISTS `supplier`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `student` (
+CREATE TABLE `supplier` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `course` varchar(45) NOT NULL,
   `cell` varchar(45) NOT NULL,
-  `bloodGroup` varchar(4) NOT NULL,
+  `contactPersonName` varchar(45) NOT NULL,
+  `contactPersonCell` varchar(45) NOT NULL,
+  `address` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `student`
+-- Dumping data for table `supplier`
 --
 
-LOCK TABLES `student` WRITE;
-/*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,'Mahbub','JEE','01715230943','A+'),(2,'Sajib','WPDF','575676757676','B+'),(3,'Rased','Network','46546556','O+');
-/*!40000 ALTER TABLE `student` ENABLE KEYS */;
+LOCK TABLES `supplier` WRITE;
+/*!40000 ALTER TABLE `supplier` DISABLE KEYS */;
+INSERT INTO `supplier` VALUES (1,'Square','01644466','Mahbub','0156465778','Savar'),(2,'Akij Group','2343545','Sabbir','234534578','Banani');
+/*!40000 ALTER TABLE `supplier` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -83,7 +81,7 @@ CREATE TABLE `user` (
   `password` varchar(45) NOT NULL,
   `role` varchar(45) NOT NULL DEFAULT 'Admin',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username_UNIQUE` (`userName`)
+  UNIQUE KEY `userNamel_UNIQUE` (`userName`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -106,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-11 15:35:48
+-- Dump completed on 2026-03-12 11:32:56
