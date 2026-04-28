@@ -81,7 +81,7 @@ CREATE TABLE `student1` (
   `dob` varchar(45) DEFAULT NULL,
   `fee` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,6 +90,7 @@ CREATE TABLE `student1` (
 
 LOCK TABLES `student1` WRITE;
 /*!40000 ALTER TABLE `student1` DISABLE KEYS */;
+INSERT INTO `student1` VALUES (2,'Mahbub R Rahman','mahabub.sheikh2001@gmail.com','2026-04-06',323),(3,'Sabbir Hasan','sabbir@gmail.com','2026-04-24',43565);
 /*!40000 ALTER TABLE `student1` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -102,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-27 17:43:25
+-- Dump completed on 2026-04-28 17:42:26
