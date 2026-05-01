@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: jsp
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,35 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `custom`
+--
+
+DROP TABLE IF EXISTS `custom`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `custom` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `custom1` varchar(45) DEFAULT NULL,
+  `custom2` varchar(45) DEFAULT NULL,
+  `custom3` varchar(45) DEFAULT NULL,
+  `custom4` varchar(45) DEFAULT NULL,
+  `custom5` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `custom`
+--
+
+LOCK TABLES `custom` WRITE;
+/*!40000 ALTER TABLE `custom` DISABLE KEYS */;
+INSERT INTO `custom` VALUES (2,'Mahbub','mahabub.sheikh2001@gmail.com','2026-05-05','2300',NULL,NULL),(3,'Sabbir Hasan','sabbir@gmail.com','2026-05-12','2400',NULL,NULL);
+/*!40000 ALTER TABLE `custom` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `employee`
@@ -103,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-28 17:42:26
+-- Dump completed on 2026-05-02  0:35:36
