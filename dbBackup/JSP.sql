@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
 -- Host: localhost    Database: jsp
 -- ------------------------------------------------------
--- Server version	8.0.44
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -70,6 +70,33 @@ INSERT INTO `employee` VALUES (1,'RASEL AHMED MOHAN',1234),(3,'Mahbub R Rahman',
 UNLOCK TABLES;
 
 --
+-- Table structure for table `entity`
+--
+
+DROP TABLE IF EXISTS `entity`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `entity` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `subject` varchar(45) DEFAULT NULL,
+  `marks` double DEFAULT NULL,
+  `department` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `entity`
+--
+
+LOCK TABLES `entity` WRITE;
+/*!40000 ALTER TABLE `entity` DISABLE KEYS */;
+INSERT INTO `entity` VALUES (1,'Mahbubur Rahman','Statistics',45,'Science'),(2,'Mishkat','Physics',56,'Science'),(3,'Sabbir','Math',67,'Science'),(4,'Shimul','Political Science',78,'Humanities'),(5,'Badrul','History',125,'Humanities');
+/*!40000 ALTER TABLE `entity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `student`
 --
 
@@ -132,4 +159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-02  0:35:36
+-- Dump completed on 2026-05-04 16:56:19
