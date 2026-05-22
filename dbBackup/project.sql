@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
--- Host: localhost    Database: workbridge
+-- Host: localhost    Database: project
 -- ------------------------------------------------------
 -- Server version	8.0.44
 
@@ -28,7 +28,7 @@ CREATE TABLE `countries` (
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK1pyiwrqimi3hnl3vtgsypj5r` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,30 +37,62 @@ CREATE TABLE `countries` (
 
 LOCK TABLES `countries` WRITE;
 /*!40000 ALTER TABLE `countries` DISABLE KEYS */;
+INSERT INTO `countries` VALUES (1,'bd','Bangladesh'),(2,'pk','Pakistan'),(3,'pl','Palestine');
 /*!40000 ALTER TABLE `countries` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `departments`
+-- Table structure for table `countries_divisions`
 --
 
-DROP TABLE IF EXISTS `departments`;
+DROP TABLE IF EXISTS `countries_divisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `departments` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE `countries_divisions` (
+  `country_id` int NOT NULL,
+  `divisions_id` int NOT NULL,
+  UNIQUE KEY `UK5nukswjkbydjx1kl7jfhq08hq` (`divisions_id`),
+  KEY `FK9aasn00rnkkb8017v049s0due` (`country_id`),
+  CONSTRAINT `FK9aasn00rnkkb8017v049s0due` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`),
+  CONSTRAINT `FKs9e06uol3ivsv0au83sejk72j` FOREIGN KEY (`divisions_id`) REFERENCES `divisions` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `departments`
+-- Dumping data for table `countries_divisions`
 --
 
-LOCK TABLES `departments` WRITE;
-/*!40000 ALTER TABLE `departments` DISABLE KEYS */;
-/*!40000 ALTER TABLE `departments` ENABLE KEYS */;
+LOCK TABLES `countries_divisions` WRITE;
+/*!40000 ALTER TABLE `countries_divisions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `countries_divisions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `divisions`
+--
+
+DROP TABLE IF EXISTS `divisions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `divisions` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `country_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UKoujei63okkb767mmtbv0rrx7p` (`name`),
+  KEY `FK2o4cg3xxx0ea0mapwhjr7racp` (`country_id`),
+  CONSTRAINT `FK2o4cg3xxx0ea0mapwhjr7racp` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `divisions`
+--
+
+LOCK TABLES `divisions` WRITE;
+/*!40000 ALTER TABLE `divisions` DISABLE KEYS */;
+INSERT INTO `divisions` VALUES (1,'Dhaka',1);
+/*!40000 ALTER TABLE `divisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -83,7 +115,7 @@ CREATE TABLE `policestations` (
 
 LOCK TABLES `policestations` WRITE;
 /*!40000 ALTER TABLE `policestations` DISABLE KEYS */;
-INSERT INTO `policestations` VALUES (1,'Keraniganj'),(2,'Lakshmipur');
+INSERT INTO `policestations` VALUES (1,'Mohammadpur'),(2,'Keraniganj');
 /*!40000 ALTER TABLE `policestations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -96,4 +128,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-23  4:18:40
+-- Dump completed on 2026-05-23  4:19:27
