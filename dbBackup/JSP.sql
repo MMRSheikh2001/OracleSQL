@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: jsp
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -42,6 +42,29 @@ LOCK TABLES `custom` WRITE;
 /*!40000 ALTER TABLE `custom` DISABLE KEYS */;
 INSERT INTO `custom` VALUES (2,'Mahbub','mahabub.sheikh2001@gmail.com','2026-05-05','2300',NULL,NULL),(3,'Sabbir Hasan','sabbir@gmail.com','2026-05-12','2400',NULL,NULL);
 /*!40000 ALTER TABLE `custom` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `departments`
+--
+
+DROP TABLE IF EXISTS `departments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `departments` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `departments`
+--
+
+LOCK TABLES `departments` WRITE;
+/*!40000 ALTER TABLE `departments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `departments` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -94,6 +117,29 @@ LOCK TABLES `entity` WRITE;
 /*!40000 ALTER TABLE `entity` DISABLE KEYS */;
 INSERT INTO `entity` VALUES (1,'Mahbubur Rahman','Statistics',45,'Science'),(2,'Mishkat','Physics',56,'Science'),(3,'Sabbir','Math',67,'Science'),(4,'Shimul','Political Science',78,'Humanities'),(5,'Badrul','History',125,'Humanities');
 /*!40000 ALTER TABLE `entity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `policestations`
+--
+
+DROP TABLE IF EXISTS `policestations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `policestations` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `policestations`
+--
+
+LOCK TABLES `policestations` WRITE;
+/*!40000 ALTER TABLE `policestations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `policestations` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -159,4 +205,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-04 16:56:19
+-- Dump completed on 2026-06-02  1:43:51
