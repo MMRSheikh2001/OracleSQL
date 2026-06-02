@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
 -- Host: localhost    Database: project
 -- ------------------------------------------------------
--- Server version	8.0.44
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -90,7 +90,7 @@ CREATE TABLE `customers` (
   UNIQUE KEY `UKm3iom37efaxd5eucmxjqqcbe9` (`phone`),
   UNIQUE KEY `UKeuat1oase6eqv195jvb71a93s` (`user_id`),
   CONSTRAINT `FKrh1g1a20omjmn6kurd35o3eit` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Mohammadpur','2001-02-21 06:00:00.000000','mahbub@gmail.com','male',NULL,'Mahbub','123456','01715230943',1);
+INSERT INTO `customers` VALUES (1,'Mohammadpur','2001-02-21 06:00:00.000000','mahbub@gmail.com','male',NULL,'Mahbub','123456','01715230943',1),(2,'123 Main Street, Springfield','1995-05-15 06:00:00.000000','sabbirhasan.stat@gmail.com','Male','','Sabbir Hasan','SecurePass123','+1234567890',2),(4,'123 Main Street, Springfield','1995-05-15 06:00:00.000000','shimulpk61100@gmail.com','Male','','Shimul','SecurePass123','+123454567890',4),(5,'123 Main Street, Springfield','1995-05-15 06:00:00.000000','mmrs0123456789@gmail.com','Male','','Shimul','SecurePass123','+12890',5);
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,7 +198,7 @@ CREATE TABLE `users` (
   `phone` varchar(255) DEFAULT NULL,
   `role` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,7 +207,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'mahbub@gmail.com','Mahbub','123456',NULL,'01715230943','CUSTOMER');
+INSERT INTO `users` VALUES (1,'mahbub@gmail.com','Mahbub','123456',NULL,'01715230943','CUSTOMER'),(2,'sabbirhasan.stat@gmail.com','Sabbir Hasan','SecurePass123',NULL,'+1234567890','CUSTOMER'),(3,'shimulpk61100@gmail.com','Shimul','SecurePass123',NULL,'+1234567890','CUSTOMER'),(4,'shimulpk61100@gmail.com','Shimul','SecurePass123',NULL,'+123454567890','CUSTOMER'),(5,'mmrs0123456789@gmail.com','Shimul','SecurePass123',NULL,'+12890','CUSTOMER');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -220,4 +220,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-02  1:45:13
+-- Dump completed on 2026-06-02 18:01:01
